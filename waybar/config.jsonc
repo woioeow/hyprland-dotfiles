@@ -31,16 +31,16 @@
     "*":[1,2,3,4,5,6,7,8,9]
     },
     "format-icons": {
-      "1": "󰣇",     // 终端
-      "2": "",     // Firefox
-      "3": "",     // 编辑器
-      "4": "",     // 文件管理器
-      "5": "",     // 视频/会议
-      "6": "",     // 音乐
-      "7": "",     // 绘图
-      "8": "󰖟",     // 聊天
-      "9": "",     // 设置
-      "default": "" // 其他未指定的工作区
+      "1": "󰣇",
+      "2": "",
+      "3": "󰈹",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "󰖟",
+      "9": "",
+      "default": ""
     }
   },
   "custom/lock": {
@@ -75,14 +75,14 @@
       "warning": 30,
       "critical": 15
     },
-    "format": "<span color='#28CD41'> {icon} </span>{capacity}% ",
-    "format-charging": " ⚡{capacity}%",
+    "format": "<span color='#28CD41'> {icon}</span>{capacity}% ",
+    "format-charging": " 󱐋{capacity}%",
 	  "interval": 1,
     "format-icons": ["󰂎", "󰁼", "󰁿", "󰂁", "󰁹"],
     "tooltip": true
   },
   "pulseaudio": {
-    "format": "<span color='#00FF7F'>{icon} </span>{volume}% ",
+    "format": "<span color='#00FF7F'>{icon}</span>{volume}% ",
     "format-muted": "<span color='#FF4040'> 󰖁 </span>0% ",
     "format-icons": {
       "headphone": "<span color='#BF00FF'>  </span>",
@@ -92,8 +92,8 @@
       "portable": "<span color='#00FFFF'>  </span>",
       "car": "<span color='#FFA500'>  </span>",
       "default": [
-        "<span color='#808080'> </span>",
-        "<span color='#FFFF66'> </span>",
+        "<span color='#808080'>  </span>",
+        "<span color='#FFFF66'>  </span>",
         "<span color='#00FF7F'>  </span>"
       ]
     },
@@ -104,15 +104,15 @@
   },
   "custom/temperature": {
     "exec": "sensors | awk '/^Package id 0:/ {print int($4)}'",
-    "format": "<span color='#FFA500'>  </span>{}°C ",
+    "format": "<span color='#FFA500'> </span>{}°C ",
     "interval": 5,
     "tooltip": true,
     "tooltip-format": "当前 CPU 温度: {}°C"
   },
   "memory": {
-    "format": "<span color='#8A2BE2'> 󰍛 </span>{used:0.2f}G/{total:0.2f}G ",
+    "format": "<span color='#8A2BE2'>  </span>{used:0.1f}G/{total:0.1f}G ",
     "tooltip": true,
-    "tooltip-format": "当前内存占比: {used:0.1}G/{total:0.1f}G"
+    "tooltip-format": "当前内存占比: {used:0.2f}G/{total:0.2f}G"
   },
   "cpu": {
     "format": "<span color='#FF9F0A'>  </span>{usage}% ",
