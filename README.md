@@ -12,8 +12,14 @@
 
 ![](./assets/style1_3.png)
 
+![](./assets/style1_5.png)
+
+![](./assets/style1_6.png)
+
 ## Style2
 
 ![](./assets/style2_2.png)
 
 ![](./assets/style2_1.png)
+
+![](./assets/style2_3.png)
