@@ -1,0 +1,152 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 45,
+  "spacing": 0,
+  "modules-left": [
+    "hyprland/workspaces",
+    "tray",
+    "custom/lock",
+    "custom/reboot",
+    "custom/power",
+    "clock"
+  ],
+  "modules-center": ["hyprland/window"],
+  "modules-right": [
+    "network",
+    "battery",
+    "bluetooth",
+    "pulseaudio",
+    "backlight",
+    "custom/temperature",
+    "memory",
+    "cpu"
+  ],
+  "hyprland/workspaces": {
+    "disable-scroll": false,
+    "all-outputs": true,
+    "format": "{icon}",
+    "on-click": "activate",
+    "persistent-workspaces": {
+    "*":[1,2,3,4,5,6,7]
+    },
+    "format-icons":{
+    "1": "󰣇",
+    "2": "",
+    "3": "",
+    "4": "󰇮",
+    "5": "",
+    "6": "",
+    "7": "",
+    "active": "󱓻"
+    }
+  },
+  "custom/lock": {
+  "format": "  ",
+  "on-click": "hyprlock",
+  "tooltip": true,
+  "tooltip-format": "锁屏"
+  },
+  "custom/reboot": {
+    "format": "  ",
+    "on-click": "systemctl reboot",
+    "tooltip": true,
+    "tooltip-format": "重启"
+  },
+  "custom/power": {
+    "format": "  ",
+    "on-click": "systemctl poweroff",
+    "tooltip": true,
+    "tooltip-format": "关机"
+  },
+  "network": {
+    "format-wifi": " 󰤨 {essid} ",
+    "format-ethernet": " Wired ",
+    "tooltip-format": "<span color='#FF1493'> 󰅧 </span>{bandwidthUpBytes}  <span color='#00BFFF'> 󰅢 </span>{bandwidthDownBytes}",
+    "format-linked": " 󱘖 {ifname} (No IP) ",
+    "format-disconnected": "  Disconnected ",
+    "format-alt": " 󰤨 {signalStrength}% ",
+    "interval": 1
+  },
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": " {icon} {capacity}% ",
+    "format-charging": " 󱐋{capacity}%",
+	  "interval": 1,
+    "format-icons": ["󰂎", "󰁼", "󰁿", "󰂁", "󰁹"],
+    "tooltip": true
+  },
+  "pulseaudio": {
+    "format": "{icon}{volume}% ",
+    "format-muted": " 󰖁 0% ",
+    "format-icons": {
+      "headphone": "  ",
+      "hands-free": "  ",
+      "headset": "  ",
+      "phone": "  ",
+      "portable": "  ",
+      "car": "  ",
+      "default": [
+        "  ",
+        "  ",
+        "  "
+      ]
+    },
+    "on-click-right": "pavucontrol -t 3",
+    "on-click": "pactl -- set-sink-mute 0 toggle",
+    "tooltip": true,
+    "tooltip-format": "当前系统声音: {volume}%"
+  },
+  "custom/temperature": {
+    "exec": "sensors | awk '/^Package id 0:/ {print int($4)}'",
+    "format": " {}°C ",
+    "interval": 5,
+    "tooltip": true,
+    "tooltip-format": "当前 CPU 温度: {}°C"
+  },
+  "memory": {
+    "format": "  {used:0.1f}G/{total:0.1f}G ",
+    "tooltip": true,
+    "tooltip-format": "当前内存占比: {used:0.2f}G/{total:0.2f}G"
+  },
+  "cpu": {
+    "format": "  {usage}% ",
+    "tooltip": true
+  },
+  "clock": {
+    "interval": 1,
+    "timezone": "Asia/Chengdu",
+    "format": "  {:%H:%M} ",
+    "tooltip": true,
+    "tooltip-format": "{:L%Y 年 %m 月 %d 日, %A}"
+  },
+  "tray": {
+    "icon-size": 17,
+    "spacing": 6
+  },
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "{icon}{percent}% ",
+    "tooltip": true,
+    "tooltip-format": "当前屏幕亮度: {percent}%",
+    "format-icons": [
+      " 󰃞 ",  // 暗 - 深灰
+      " 󰃝 ",  // 中 - 灰
+      " 󰃟 ",  // 亮 - 柠檬黄
+      " 󰃠 "   // 最亮 - 金色
+    ]
+  },
+  "bluetooth": {
+    "format": "  {status} ",
+    "format-connected": "  {device_alias} ",
+    "format-connected-battery": "  {device_alias}{device_battery_percentage}% ",
+    "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
+  }
+}
+

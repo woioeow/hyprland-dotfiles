@@ -1,0 +1,26 @@
+sort=-time
+layer=overlay
+background-color=#1e1e2e
+width=450
+height=150
+border-size=2
+border-color=#6C3483
+border-radius=12
+icons=1
+max-icon-size=64
+default-timeout=5000
+ignore-timeout=0
+font="CaskaydiaCove Nerd Font" 14
+margin=16
+padding=12,20
+
+[urgency=low]
+border-color=#444444
+
+[urgency=normal]
+border-color=#6F8FDB
+
+[urgency=critical]
+border-color=#ff5555
+default-timeout=0
+
