@@ -22,4 +22,4 @@
 
 ![](./assets/style2_1.png)
 
-![](./assets/style2_3.png)
+![](./assets/style2_3.png)![](./assets/style2_4.png)
