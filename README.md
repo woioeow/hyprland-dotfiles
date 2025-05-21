@@ -8,6 +8,8 @@
 
 [Plymouth 系统加载动画](https://github.com/adi1090x/plymouth-themes)
 
+[sddm 主题](https://github.com/Keyitdev/sddm-astronaut-theme)
+
 [neofetch 主题](https://github.com/Chick2D/neofetch-themes)
 
 [rime 输入法](https://github.com/wongdean/rime-settings)
